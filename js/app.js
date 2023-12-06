@@ -203,10 +203,11 @@ const util = (() => {
     const buka = async () => {
         const overlay = document.getElementsByClassName('loading-overlay');
         document.querySelector('body').style.overflowY = 'scroll';
-        const fontEsthetic = document.querySelector('.font-esthetic');
-        for (var i = 0; i < fontEsthetic.length; i++) {
-            fontEsthetic[i].style.color="#000";
-        }
+
+        const fontEsthetic = document.querySelectorAll('.font-esthetic');
+        fontEsthetic.forEach(function(fontEsthetic) {
+            fontEsthetic.style.color = '#000';
+        })
 
         overlay.item(0).style.display = 'none';
         AOS.init();
