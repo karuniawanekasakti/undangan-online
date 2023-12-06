@@ -13,14 +13,19 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+main {
+    background-image: url('../assets/images/nice_snow.png');
+    background-repeat: repeat;
+}
+
 .font-esthetic {
-    font-family: 'Sacramento', cursive !important;
-    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000 ;
 }
 
 .font-arabic {
     font-family: 'Noto Naskh Arabic', serif !important;
-    color: #ffffff !important;
+    color: #000000 !important;
 }
 
 .img-crop {
@@ -46,6 +51,15 @@ body::-webkit-scrollbar {
 }
 
 .loading-page {
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2001;
+    top: 0;
+}
+
+.loading-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -53,7 +67,9 @@ body::-webkit-scrollbar {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: #111111;
+    /* background-color: #111111; */
+    background-image: url('../assets/images/overlay.JPG');
+    background-size: cover;
     z-index: 1056 !important;
 }
 
@@ -68,6 +84,7 @@ body::-webkit-scrollbar {
     border-radius: 1.4rem;
     opacity: 0.75;
     box-sizing: content-box;
+    border-color: #000;
 }
 
 @keyframes scroll {
@@ -90,7 +107,7 @@ body::-webkit-scrollbar {
     width: 0.25rem;
     height: 0.625rem;
     border-radius: 25%;
-    background-color: #ffffff;
+    background-color: #000000;
     animation-name: scroll;
     animation-duration: 2.5s;
     animation-timing-function: linear;
@@ -98,13 +115,70 @@ body::-webkit-scrollbar {
 }
 
 .dark-section {
-    background-color: #111111 !important;
+    background-color: #EEEDED !important;
+    /* background-image: url('../assets//images//'); */
     margin-top: -0.4rem;
     margin-bottom: -0.4rem;
 }
 
 footer {
-    background-color: #111111 !important;
+    background-color: #EEEDED !important;
     margin-top: -0.4rem;
     padding-bottom: 4rem;
+}
+
+/* Dekstop */
+@media (min-width: 768px) {
+    .flower-1-right {
+      height: 50%;
+    }
+    .flower-1-left {
+        height: 40%;
+      }
+    .flower-2-left{
+      height: 60%;
+      left: -30px;
+    }
+    .flower-2-right{
+      height: 60%;
+      right: -30px;
+    }
+  }
+
+
+
+/* Mobile */
+  @media (max-width:768px) {
+    .flower-1-right {
+      height: 20%;
+    }
+    .flower-1-left {
+        height: 20%;
+      }
+    .flower-2-left{
+      left: -20px;
+      height: 200px;
+      bottom: 0;
+      top: 250%;
+    }
+    .flower-2-right{
+      right: 0;
+      height: 30%;
+    }
+    .flower-3-top{
+      width: 100%;
+    }
+    .flower-4-bottom{
+      width: 100%;
+    }
+    .flower-bukutamu-right{
+      height: 25%;
+    }
+    .flower-bukutamu-left{
+      height: 20%;
+    }
+  }
+
+p, h5, h2 {
+  color: #000;
 }
