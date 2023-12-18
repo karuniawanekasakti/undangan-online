@@ -52,6 +52,14 @@ main {
   width: 100%;
 }
 
+.img-main >img{
+  display: inline;
+  margin: -90px auto 0; /* Adjust the margin-top value as needed */
+  height: auto;
+  width: 100%;
+
+}
+
 .btn-music {
     position: fixed;
     bottom: 9vh;
